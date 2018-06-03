@@ -1,0 +1,16 @@
+[package]
+name = "shoji"
+description = "Sliding window rate limiter"
+readme = "README.md"
+license = "Apache-2.0"
+documentation = "https://jgrillo.github.io/shoji/"
+repository = "https://github.com/jgrillo/shoji"
+keywords = ["ratelimit", "sliding"]
+version = "0.0.1"
+authors = ["Jesse C. Grillo <jesse.grillo@gmail.com>"]
+
+[features]
+integration = []
+
+[dependencies]
+redis = "0.8.0"
