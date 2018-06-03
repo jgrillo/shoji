@@ -1,0 +1,15 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+matrix:
+  allow_failures:
+    - rust: nightly
+script: 
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then cargo test --features integration; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then cargo test; fi'
+notifications:
+  email:
+    - jesse.grillo@gmail.com
+  on_failure: always
